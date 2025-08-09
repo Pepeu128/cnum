@@ -1,4 +1,4 @@
-
+from math import sqrt 
 
 def é_perfeito(n: int) -> bool:
     if n < 1:
@@ -27,6 +27,18 @@ def fatorial(n: int) -> int:
         n = n * (n - 1)
     return n
 
+def é_primo(n: int) -> bool:
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    for i in range(2, n):
+        if sqrt(n) == int:
+            return False
+        if n % i == 0:
+            return False
+    return True
+
 def main():
     assert is_perfect(6) == True
     assert is_perfect(7) == False
@@ -37,6 +49,8 @@ def main():
         factorial(-1)
     except ValueError as error:
         assert str(error) == "O número deve ser não negativo."
+
+
 
         
 
