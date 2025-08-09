@@ -37,7 +37,7 @@ def é_primo(n: int) -> bool:
     if (n > 2) / 2 == int:
         return False 
     
-    for i in range(2, n):
+    for i in range(3, n):
         if n % i == 0:
             return False
     return True
