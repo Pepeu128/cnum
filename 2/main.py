@@ -45,6 +45,8 @@ def main():
     assert is_perfect(-1) == False
     assert factorial(5) == 120
     assert factorial(0) == 1
+    assert is_prime(7) == True
+    assert is_prime(10) == False
     try:
         factorial(-1)
     except ValueError as error:
