@@ -32,9 +32,12 @@ def é_primo(n: int) -> bool:
         return False
     if n == 2:
         return True
+    if sqrt(n) == int:
+        return False
+    if n / 2 == int:
+        return False 
+    
     for i in range(2, n):
-        if sqrt(n) == int:
-            return False
         if n % i == 0:
             return False
     return True
