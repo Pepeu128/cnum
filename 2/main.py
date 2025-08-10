@@ -34,7 +34,7 @@ def é_primo(n: int) -> bool:
         return True
     if sqrt(n) == int:
         return False
-    if (n > 2) / 2 == int:
+    if (n > 2) % 2 == 0:
         return False 
     
     for i in range(3, n):
@@ -43,15 +43,15 @@ def é_primo(n: int) -> bool:
     return True
 
 def main():
-    assert is_perfect(6) == True
-    assert is_perfect(7) == False
-    assert is_perfect(-1) == False
-    assert factorial(5) == 120
-    assert factorial(0) == 1
-    assert is_prime(7) == True
-    assert is_prime(10) == False
+    assert é_perfeito(6) == True
+    assert é_perfeito(7) == False
+    assert é_perfeito(-1) == False
+    assert fatorial(5) == 120
+    assert fatorial(0) == 1
+    assert é_primo(7) == True
+    assert é_primo(10) == False
     try:
-        factorial(-1)
+        fatorial(-1)
     except ValueError as error:
         assert str(error) == "O número deve ser não negativo."
 
