@@ -30,11 +30,11 @@ def fatorial(n: int) -> int:
 def é_primo(n: int) -> bool:
     if n < 2:
         return False
-    if n == 2:
+    elif n == 2:
         return True
-    if sqrt(n) == int:
+    elif sqrt(n) == int:
         return False
-    if (n > 2) % 2 == 0:
+    elif (n > 2) % 2 == 0:
         return False 
     
     for i in range(3, n):
