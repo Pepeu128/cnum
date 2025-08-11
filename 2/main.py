@@ -1,4 +1,4 @@
-from math import sqrt 
+from math import isqrt 
 
 def é_perfeito(n: int) -> bool:
     if n < 1:
@@ -12,13 +12,11 @@ def é_perfeito(n: int) -> bool:
     return divisores == n
 
 def fatorial(n: int) -> int:
-    for n in range(n, 1):
-        if n == 0:
-            return False
-        if (n - 1) == 0:
-            return n
-        else:
-            return n * fatorial(n - 1)
+    if n == 0 or n == 1:
+        return 1
+    while i > 1:
+        i == n * (n - 1)
+        return i
 
 def fatorial(n: int) -> int:
     if n < 0:
@@ -30,14 +28,12 @@ def fatorial(n: int) -> int:
 def é_primo(n: int) -> bool:
     if n < 2:
         return False
-    elif n == 2:
+    if n == 2:
         return True
-    elif sqrt(n) == int:
+    if n % 2 == 0:
         return False
-    elif (n > 2) % 2 == 0:
-        return False 
-    
-    for i in range(3, n):
+
+    for i in range(3, isqrt(n) + 1, 2):
         if n % i == 0:
             return False
     return True
