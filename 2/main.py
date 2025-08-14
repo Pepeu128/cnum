@@ -1,4 +1,35 @@
 from math import isqrt 
+import numpy as np
+import matplotlib.pyplot as plt
+
+A = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])
+
+B = np.array([[10, 11, 12],
+              [13, 14, 15],
+              [16, 17, 18]])
+
+C = A @ B
+
+def plot(n: int) -> None:
+    x = np.linspace(-np.pi, np.pi, n)  
+    y_sen = np.sin(x)                   
+    y_cos = np.cos(x)                   
+
+    plt.plot(x, y_sen, label='seno')
+    plt.plot(x, y_cos, label='cosseno')
+    plt.xlim(-np.pi, np.pi)
+
+    plt.xlabel('Ângulo [rad]')
+    plt.ylabel('Função trigonométrica(x)')
+    plt.grid(True)
+    plt.legend()
+    plt.savefig("plot.png")  # Salva como imagem no ambiente
+
+    print(f'x =\n{x}')
+    print(f'y_sen =\n{y_sen}')
+    print(f'y_cos =\n{y_cos}')
 
 def é_perfeito(n: int) -> bool:
     if n < 1:
@@ -38,18 +69,36 @@ def é_primo(n: int) -> bool:
             return False
     return True
 
-def main():
-    assert é_perfeito(6) == True
-    assert é_perfeito(7) == False
-    assert é_perfeito(-1) == False
-    assert fatorial(5) == 120
-    assert fatorial(0) == 1
-    assert é_primo(7) == True
-    assert é_primo(10) == False
-    try:
-        fatorial(-1)
-    except ValueError as error:
-        assert str(error) == "O número deve ser não negativo."
+def soma_digitos(n: int) -> int:
+    soma = 0
+    while n > 0:
+        soma += n % 10
+        n //= 10
+    return soma
+
+if __name__ == "__main__":
+    def main():
+        assert é_perfeito(6) == True
+        assert é_perfeito(7) == False
+        assert é_perfeito(-1) == False
+        assert fatorial(5) == 120
+        assert fatorial(0) == 1
+        assert é_primo(7) == True
+        assert é_primo(10) == False
+        try:
+            fatorial(-1)
+        except ValueError as error:
+            assert str(error) == "O número deve ser não negativo."
+        assert sum_of_digits(123) == 6
+        try:
+            sum_of_digits(-1)
+        except ValueError as error:
+            assert str(error) == "O número deve ser não negativo."
+        print(C)
+        print(C.shape) 
+        print(C.size) 
+        print(len(C)) 
+        plot(35)
 
 
 
