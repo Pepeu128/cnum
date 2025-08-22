@@ -78,27 +78,27 @@ def soma_digitos(n: int) -> int:
 
 if __name__ == "__main__":
     def main():
-        assert é_perfeito(6) == True
-        assert é_perfeito(7) == False
-        assert é_perfeito(-1) == False
-        assert fatorial(5) == 120
-        assert fatorial(0) == 1
-        assert é_primo(7) == True
-        assert é_primo(10) == False
+        assert is_perfect(6) == True
+        assert is_perfect(7) == False
+        assert is_perfect(-1) == False
+        assert factorial(5) == 120
+        assert factorial(0) == 1
         try:
-            fatorial(-1)
+            factorial(-1)
         except ValueError as error:
             assert str(error) == "O número deve ser não negativo."
+        assert is_prime(7) == True
+        assert is_prime(10) == False
         assert sum_of_digits(123) == 6
         try:
             sum_of_digits(-1)
         except ValueError as error:
             assert str(error) == "O número deve ser não negativo."
-        print(C)
-        print(C.shape) 
-        print(C.size) 
-        print(len(C)) 
-        plot(35)
+    print(C)
+    print(C.shape) 
+    print(C.size) 
+    print(len(C)) 
+    plot(35)
 
 
 
