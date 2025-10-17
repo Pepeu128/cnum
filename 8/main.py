@@ -1,5 +1,3 @@
-# main.py
-
 import numpy as np
 from algoritmos import bissecao, ponto_fixo, f_atv1, g_atv1, gauss_seidel, newton_raphson_sistemas, F_atv4, J_atv4
 
@@ -17,6 +15,7 @@ T_ponto_fixo = ponto_fixo(g_atv1, T_chute, E, K, tol=1e-8)
 print(f"--- Atividade 1: Temperatura Mínima da Placa (Método do Ponto Fixo) ---")
 print(f"Resposta aproximada (Ponto Fixo): T={T_ponto_fixo:.18f}")
 print("\n")
+
 print("--- Atividade 2: Tensões Nominais dos Reatores (Gauss-Seidel) ---")
 A2 = np.array([
     [17.0, -2.0, -3.0],
@@ -36,6 +35,7 @@ if R_gauss_seidel is not None:
     print(f"R2 = {R2:.8f}")
     print(f"R3 = {R3:.8f}")
 print("\n")
+
 print("--- Atividade 3: Corrente no Resistor R3 (Gauss-Seidel) ---")
 A3 = np.array([
     [20.0, 10.0],
@@ -64,6 +64,7 @@ if I_gauss_seidel is not None:
         print(f"Sistema Corrigido (Malhas): I1={I1_c:.8f}, I2={I2_c:.8f}")
         print(f"Corrente no R3: IR3 = I1 - I2 = {I_R3:.4f} A")
 print("\n")
+
 print("--- Atividade 4: Temperaturas de Equilíbrio (Newton-Raphson para Sistemas) ---")
 E1 = 0.01753
 E2 = 0.00254
